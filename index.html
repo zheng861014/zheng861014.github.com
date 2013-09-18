@@ -65,7 +65,7 @@
 				    </section>
 					<section>
 					<h3>封装</h3>
-					<p align=left>1.什么是封装？</p>
+					<p align=left>1. 什么是封装？</p>
 					<p align=left>封装就是将属性私有化，提供公有的方法访问私有属性。如：</p> 
 					<pre><code data-trim contenteditable>
 					private String name;
@@ -79,14 +79,14 @@
 				    </section>
 				    <section>
 				    <h3>继承</h3>
-                    <p align=left>1.生活中，继承的例子随处可见，如：</p>
+                    <p align=left>1. 生活中，继承的例子随处可见，如：</p>
                     <img src="tupian/tupian1.gif">
-                    <p align=left>2.使用继承的好处？</p>
+                    <p align=left>2. 使用继承的好处？</p>
                     <p align=left>使用继承提高代码的复用性</p>
 				    </section>
 				    <section>
 				    <h3>继承</h3>
-                    <p align=left>3.如何实现继承</p>
+                    <p align=left>3. 如何实现继承</p>
                     <p align=left>在Java语言中，用extends关键字表示一个类继承另一个类，例如：</p>
                     <pre><code data-trim contenteditable>
                       public class Son extends Father{
@@ -122,14 +122,14 @@
 				    </section>
 				    <section>
 				    <h3>多态</h3>
-                    <p align=left>1.什么是多态？</p>
+                    <p align=left>1. 什么是多态？</p>
                     <p align=left>指父类中定义的属性与方法被子类继承后，可以具有不同的数据类型或行为。</p>
-                    <p align=left>2.生活中的多态，如：</p>
+                    <p align=left>2. 生活中的多态，如：</p>
                     <img src="tupian/tupian2.gif">
 				    </section>
 				    <section>
 				    <h3>多态</h3>
-                    <p align=left>3.多态是通过覆盖父类的方法来实现，在运行是根据传递的对象引用，来实现相应的方法，如：</p>
+                    <p align=left>3. 多态是通过覆盖父类的方法来实现，在运行是根据传递的对象引用，来实现相应的方法，如：</p>
                     <pre><code data-trim contenteditable>
                     public static void main(String[] args){
     A a = new B();
@@ -163,7 +163,7 @@ static class B{
                 <section>
                 <section>
                 <h3>接口</h3>
-                  <p align=left>1.Java中的多重继承</p>
+                  <p align=left>1. Java中的多重继承</p>
                   <p align=left>接口是实现多重继承的途径</p>
                   <p align=left>多重继承：子类可以实现多个接口;子类只能继承一个父类</p>
                   <pre><code data-trim contenteditable>
@@ -176,13 +176,13 @@ static class B{
    public class Test extends C implements D,E
                   </code></pre>
                   <p align=left>使用接口的核心原因：</p>
-                  <p align=left>a.为了能够向上转型为多个基类型（以及由此带来的灵活性）</p>
-                  <p align=left>b.与使用抽象类相同:防止客户端程序员创建该类的对象，并确保这仅仅是建立一个接口</p>
+                  <p align=left>a. 为了能够向上转型为多个基类型（以及由此带来的灵活性）</p>
+                  <p align=left>b. 与使用抽象类相同:防止客户端程序员创建该类的对象，并确保这仅仅是建立一个接口</p>
                   <p align=left>注：如果知道某事物应该成为一个基类，那么第一选择应该使它成为一个接口</p>
                 </section>
                 <section>
                   <h3>接口</h3>
-                  <p align=left>2.适配接口</p>
+                  <p align=left>2. 适配接口</p>
                   <p align=left>接口最吸引人的原因之一，就是允许同一个接口具有多个不同的具体实现；</p>
                   <p align=left>它的体现形式通常是一个接受接口类型的方法，而该接口的实现和向该方法传递的对象则取决于方法的使用者。</p>
                   <p align=left>典型运用就是策略模式</p>
@@ -199,7 +199,7 @@ static class B{
                 </section>
                 <section>
                   <h3>接口</h3>
-                  <p align=left>3.接口中的域</p>
+                  <p align=left>3. 接口中的域</p>
                   <p align=left>接口中的域默认就是static final</p>
                   <p align=left>jdk1.5以前其可以实现与enum类似的作用</p>
                   <p align=left>接口可以嵌套在类或其他接口中</p>
@@ -207,7 +207,7 @@ static class B{
                   </section>
                   <section>
                   <h3>接口</h3>
-                  <p align=left>4.接口与工厂</p>
+                  <p align=left>4. 接口与工厂</p>
                   <p align=left>接口是实现多重继承的途径，而生成遵循某个接口的对象的典型方式就是工厂模式</p>
                   </section>
                 </section>
@@ -226,9 +226,9 @@ static class B{
                 <section>
                    <section>
                       <h3>内部类</h3>
-                      <p align=left>1.内部类的定义</p>
+                      <p align=left>1. 内部类的定义</p>
                       <p align=left>可以将一个类的定义放在另一个类的定义内部，这就是内部类</p>
-                      <p align=left>2.当我们建立一个inner class时，其对象就拥有了与外部类对象之间的一种关系，这是通过一个特殊的this reference形式的，使得内部类对象可以随意的访问外部类中所有的成员。</p>
+                      <p align=left>2. 当我们建立一个inner class时，其对象就拥有了与外部类对象之间的一种关系，这是通过一个特殊的this reference形式的，使得内部类对象可以随意的访问外部类中所有的成员。</p>
                       <pre><code data-trim contenteditable>
                         public class Outer{
          private int index = 100;
@@ -250,8 +250,8 @@ static class B{
                    </section>
                    <section>
                      <h3>内部类</h3>
-                      <p align=left>3.使用.this与.new</p>
-                      <p align=left>a.在内部类中生成对外部类对象的引用.this</p>
+                      <p align=left>3. 使用.this与.new</p>
+                      <p align=left>a. 在内部类中生成对外部类对象的引用.this</p>
                       <pre><code data-trim contenteditable>
                         public class DotThis {
      void f() {
@@ -265,7 +265,7 @@ static class B{
      }
   }
                      </code></pre>
-                     <p align=left>b.在其他类中创建内部类对象.new要通过外部类的一个引用来创建</p>
+                     <p align=left>b. 在其他类中创建内部类对象.new要通过外部类的一个引用来创建</p>
                      <pre><code data-trim contenteditable>
                        public class DotNew{
     public class Inner {}
@@ -280,21 +280,21 @@ static class B{
                    </section>
                    <section>
                      <h3>内部类</h3>
-                      <p align=left>4.在方法与作用域内的内部类</p>
+                      <p align=left>4. 在方法与作用域内的内部类</p>
                       <p align=left>可以在一个方法里面或者在任意的作用域内定义内部类，理由如下：</p>
-                      <p align=left>a.实现了某类型的接口，于是可以创建并返回对其的引用。</p>
-                      <p align=left>b.解决复杂问题，需要创建一个类来辅助解决，但是又不希望这个类是公共可用的。</p>
+                      <p align=left>a. 实现了某类型的接口，于是可以创建并返回对其的引用。</p>
+                      <p align=left>b. 解决复杂问题，需要创建一个类来辅助解决，但是又不希望这个类是公共可用的。</p>
                    </section>
                    <section>
                      <h3>内部类</h3>
-                      <p align=left>5.匿名内部类</p>
+                      <p align=left>5. 匿名内部类</p>
                       <p align=left>匿名内部类更像是一个表达式，大概如new XXX(){},它可以理解为两个过程：</p>
-                      <p align=left>a.继承或实现(new XXX() XXX可以表示类也可以是接口)</p>
-                      <p align=left>b.实例化</p>
+                      <p align=left>a. 继承或实现(new XXX() XXX可以表示类也可以是接口)</p>
+                      <p align=left>b. 实例化</p>
                    </section>
                    <section>
                      <h3>内部类</h3>
-                      <p align=left>6.内部类标识符</p>
+                      <p align=left>6. 内部类标识符</p>
                       <p align=left>外部类$内部类</p>
                       <img src="tupian/tupian4.gif">
                       <p align=left>如果是匿名内部类，则会产生一个数字来表示</p>
@@ -316,15 +316,15 @@ static class B{
 				<section>
 				   <section>
                      <h3>泛型</h3>
-                      <p align=left>1.泛型概述</p>
+                      <p align=left>1. 泛型概述</p>
                       <p align=left>泛型是在JDK1.4之后引入的，实现了参数化类型的概念，使代码可以应用于多种类型。理解了边界(能做什么，不能做什么)所在，你才能成为程序高手。因为只有知道了某个技术不能做到什么，你才能更好的做到所能做的，及弥补它的不足。</p>
                    </section>
                    <section>
                      <h3>泛型</h3>
-                      <p align=left>2.泛型及元组</p>
+                      <p align=left>2. 泛型及元组</p>
                       <p align=left>仅一次方法调用就能返回多个对象</p>
                       <pre><code data-trim contenteditable>
-                        class Holder2<A,B>{
+                        class Holder2 &#60;A,B&#62;{
     private A first;
     private B second;
     public Holder2(A a,B b) { first = a; second = b;}
@@ -336,12 +336,12 @@ static class B{
                    </section>
                    <section>
                     <h3>泛型</h3>
-                      <p align=left>3.泛型接口</p>
+                      <p align=left>3. 泛型接口</p>
                       <pre><code data-trim contenteditable>
-                      interface Generator<T> { 
+                      interface Generator &#60;T&#62; { 
     T next(); 
   } 
-  public class Ted implements Generator<String>{
+  public class Ted implements Generator &#60;String&#62;{
     public String next(){ 
       return ""; 
     }
@@ -350,12 +350,12 @@ static class B{
                    </section>
                    <section>
                      <h3>泛型</h3>
-                      <p align=left>4.泛型方法</p>
+                      <p align=left>4. 泛型方法</p>
                       <p align=left>必须将泛型参数列表置于返回值之前</p>
                       <pre><code data-trim contenteditable>
                       public class GenericMethods { 
     //将泛型参数列表置于返回值之前
-    public <T> void f(T... args){ 
+    public &#60;T&#62; void f(T... args){ 
       return ; 
     } 
   }
@@ -363,21 +363,21 @@ static class B{
                    </section>
                    <section>
                      <h3>泛型</h3>
-                      <p align=left>5.擦除</p>
-                      <p align=left>List<String>.class与List<Integer>.class是相同类型的，运行时对应的类型都是list。</p>
+                      <p align=left>5. 擦除</p>
+                      <p align=left>List&#60;String&#62;.class与List&#60;Integer&#62;.class是相同类型的，运行时对应的类型都是list。</p>
                       <p align=left>擦除丢失了在泛型代码中执行某些操作的能力。任何运行时需要知道确切类型信息的操作都将无法工作。</p>
                       <pre><code data-trim contenteditable>
-                      List<String> a = new ArrayList<String>(); 
-  List<Integer> b = new ArrayList<Integer>(); 
+                      List&#60;String&#62; a = new ArrayList&#60;String&#62;(); 
+  List&#60;Integer&#62; b = new ArrayList&#60;Integer&#62;(); 
   System.out.println(a.getClass() == b.getClass()); 
   打印结果: true
                       </code></pre>
                    </section>
                    <section>
                       <h3>泛型</h3>
-                      <p align=left>6.总结</p>
-                      <p align=left>a.使用泛型的目的在于可表达性,而不仅仅是为了创建类型安全的容器在泛型出现之前,向容器中放的是object,取出来后要下转型</p>
-                      <p align=left>  b.它是一种方法,通过它可以编写出更泛化的代码,这些代码对于它们能够作用的类型具有更少的限制,因此单个的代码段可以应用到更多的类型上</p>
+                      <p align=left>6. 总结</p>
+                      <p align=left>a. 使用泛型的目的在于可表达性,而不仅仅是为了创建类型安全的容器在泛型出现之前,向容器中放的是object,取出来后要下转型</p>
+                      <p align=left>b. 它是一种方法,通过它可以编写出更泛化的代码,这些代码对于它们能够作用的类型具有更少的限制,因此单个的代码段可以应用到更多的类型上</p>
                    </section>
                    </section>
                    
@@ -395,14 +395,14 @@ static class B{
                 <section>
                   <section>
                     <h3>字符串</h3>
-                      <p align=left>1.String对象是不可变的</p>
+                      <p align=left>1. String对象是不可变的</p>
                       <p align=left>String类中每一个看起来会修改String值的方法,实际上都是创建了一个全新的String对象,以包含修改后的字符串内容. 而最初的String对象丝毫未动。</p>
-                      <p align=left>2.重载+、+=和StringBuilder</p>
+                      <p align=left>2. 重载+、+=和StringBuilder</p>
                       <p align=left>+与+=是java中仅有的两个重载过的操作符， +后面如果是非String类,会调用toString方法，Object的toString方法打印出来的是内存地址。StringBuilder非线程安全，StringBuffer线程安全。</p>
                   </section>
                   <section>
                   <h3>字符串</h3>
-                      <p align=left>3.正则表达式</p>
+                      <p align=left>3. 正则表达式</p>
                       <pre><code data-trim contenteditable>
                       public static void main(String[] args) { 
   //将给定的正则表达式编译到模式中

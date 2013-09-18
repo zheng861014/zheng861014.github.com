@@ -208,23 +208,7 @@ static class B{
                   <section>
                   <h3>接口</h3>
                   <p align=left>4.接口与工厂</p>
-                  <p align=left>接口是实现多重继承的途径，而生成遵循某个接口的对象的典型方式就是工厂模式，如：</p>
-                  <pre><code data-trim contenteditable>
-                    public interface Human{
-    public void laugh();
-    public void cry();
-    public void talk();
-  }
-  public static Human createHuman(class c){
-    Human human = null;
-    try{
-      human=(Human) Class.forName(c.getName()).newInstance();
-    }catch(ClassNotFoundException e){
-      
-    }
-    return human;
-  }
-                  </code></pre>
+                  <p align=left>接口是实现多重继承的途径，而生成遵循某个接口的对象的典型方式就是工厂模式</p>
                   </section>
                 </section>
 
@@ -294,256 +278,155 @@ static class B{
 }
                      </code></pre>
                    </section>
+                   <section>
+                     <h3>内部类</h3>
+                      <p align=left>4.在方法与作用域内的内部类</p>
+                      <p align=left>可以在一个方法里面或者在任意的作用域内定义内部类，理由如下：</p>
+                      <p align=left>a.实现了某类型的接口，于是可以创建并返回对其的引用。</p>
+                      <p align=left>b.解决复杂问题，需要创建一个类来辅助解决，但是又不希望这个类是公共可用的。</p>
+                   </section>
+                   <section>
+                     <h3>内部类</h3>
+                      <p align=left>5.匿名内部类</p>
+                      <p align=left>匿名内部类更像是一个表达式，大概如new XXX(){},它可以理解为两个过程：</p>
+                      <p align=left>a.继承或实现(new XXX() XXX可以表示类也可以是接口)</p>
+                      <p align=left>b.实例化</p>
+                   </section>
+                   <section>
+                     <h3>内部类</h3>
+                      <p align=left>6.内部类标识符</p>
+                      <p align=left>外部类$内部类</p>
+                      <img src="tupian/tupian4.gif">
+                      <p align=left>如果是匿名内部类，则会产生一个数字来表示</p>
+                      <img src="tupian/tupian5.gif">
+                   </section>
                 </section> 
                 
-			<!--
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview.
-					</p>
-					<p>
-						Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
+               	<section>
+					<h3>目录</h3>
 					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
+						<li>Java面向对象程序设计的基本特征</li>
+						<li>接口</li>
+						<li>内部类</li>
+						<li class="fragment highlight-blue"><strong>泛型</strong></li>
+						<li>字符串</li>
 					</ul>
 				</section>
-
+				
 				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-						```
-						<section data-markdown>
-						  ## Markdown support
-
-						  For those of you who like that sort of thing.
-						  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-						</section>
-						```
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=fade#/transitions">Fade</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?theme=night#/themes">Night</a> -
-						<a href="?#/themes">Default</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the background.
-					</p>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<section data-background="#007777">
-						<h2>Slide Backgrounds</h2>
-						<p>
-							Set <code>data-background="#007777"</code> on a slide to change the full page background to the given color. All CSS color formats are supported.
-						</p>
-						<a href="#" class="image navigate-down">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code>&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-					<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" data-background-repeat="repeat" data-background-size="100px">
-						<h2>Repeated Image Backgrounds</h2>
-						<pre><code style="word-wrap: break-word;">&lt;section data-background="image.png" data-background-repeat="repeat" data-background-size="100px"&gt;</code></pre>
-					</section>
-				</section>
-
-				<section data-transition="linear" data-background="#4d7e65" data-background-transition="slide">
-					<h2>Background Transitions</h2>
-					<p>
-						Pass reveal.js the <code>backgroundTransition: 'slide'</code> config argument to make backgrounds slide rather than fade.
-					</p>
-				</section>
-
-				<section data-transition="linear" data-background="#8c4738" data-background-transition="slide">
-					<h2>Background Transition Override</h2>
-					<p>
-						You can override background transitions per slide by using <code>data-background-transition="slide"</code>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;The nice thing about standards is that there are so many to choose from&rdquo;</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						&ldquo;For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.&rdquo;
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code data-trim contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
+				   <section>
+                     <h3>泛型</h3>
+                      <p align=left>1.泛型概述</p>
+                      <p align=left>泛型是在JDK1.4之后引入的，实现了参数化类型的概念，使代码可以应用于多种类型。理解了边界(能做什么，不能做什么)所在，你才能成为程序高手。因为只有知道了某个技术不能做到什么，你才能更好的做到所能做的，及弥补它的不足。</p>
+                   </section>
+                   <section>
+                     <h3>泛型</h3>
+                      <p align=left>2.泛型及元组</p>
+                      <p align=left>仅一次方法调用就能返回多个对象</p>
+                      <pre><code data-trim contenteditable>
+                        class Holder2<A,B>{
+    private A first;
+    private B second;
+    public Holder2(A a,B b) { first = a; second = b;}
+    public String toStrinig() {
+         return "(" + first + "," + second +")";
+    }
+  } 
+                      </code></pre>
+                   </section>
+                   <section>
+                    <h3>泛型</h3>
+                      <p align=left>3.泛型接口</p>
+                      <pre><code data-trim contenteditable>
+                      interface Generator<T> { 
+    T next(); 
+  } 
+  public class Ted implements Generator<String>{
+    public String next(){ 
+      return ""; 
+    }
   }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
-				</section>
-
-				<section>
-					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
-
-						<aside class="notes">
-							This slide has fragments which are also stepped through in the notes window.
-						</aside>
-					</section>
-					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
-					</section>
-				</section>
-
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
-
-				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
-
-				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take distracting slides off the screen
-						during a presentation.
-					</p>
-				</section>
-
-				<section>
-					<h2>Stellar Links</h2>
+                      </code></pre>
+                   </section>
+                   <section>
+                     <h3>泛型</h3>
+                      <p align=left>4.泛型方法</p>
+                      <p align=left>必须将泛型参数列表置于返回值之前</p>
+                      <pre><code data-trim contenteditable>
+                      public class GenericMethods { 
+    //将泛型参数列表置于返回值之前
+    public <T> void f(T... args){ 
+      return ; 
+    } 
+  }
+                   </code></pre>
+                   </section>
+                   <section>
+                     <h3>泛型</h3>
+                      <p align=left>5.擦除</p>
+                      <p align=left>List<String>.class与List<Integer>.class是相同类型的，运行时对应的类型都是list。</p>
+                      <p align=left>擦除丢失了在泛型代码中执行某些操作的能力。任何运行时需要知道确切类型信息的操作都将无法工作。</p>
+                      <pre><code data-trim contenteditable>
+                      List<String> a = new ArrayList<String>(); 
+  List<Integer> b = new ArrayList<Integer>(); 
+  System.out.println(a.getClass() == b.getClass()); 
+  打印结果: true
+                      </code></pre>
+                   </section>
+                   <section>
+                      <h3>泛型</h3>
+                      <p align=left>6.总结</p>
+                      <p align=left>a.使用泛型的目的在于可表达性,而不仅仅是为了创建类型安全的容器在泛型出现之前,向容器中放的是object,取出来后要下转型</p>
+                      <p align=left>  b.它是一种方法,通过它可以编写出更泛化的代码,这些代码对于它们能够作用的类型具有更少的限制,因此单个的代码段可以应用到更多的类型上</p>
+                   </section>
+                   </section>
+                   
+                   <section>
+                    <h3>目录</h3>
 					<ul>
-						<li><a href="http://slid.es">Try the online editor</a></li>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
+						<li>Java面向对象程序设计的基本特征</li>
+						<li>接口</li>
+						<li>内部类</li>
+						<li>泛型</li>
+						<li class="fragment highlight-blue"><strong>字符串</strong></li>
 					</ul>
-				</section> 
-				-->
-
+                </section>
+                
+                <section>
+                  <section>
+                    <h3>字符串</h3>
+                      <p align=left>1.String对象是不可变的</p>
+                      <p align=left>String类中每一个看起来会修改String值的方法,实际上都是创建了一个全新的String对象,以包含修改后的字符串内容. 而最初的String对象丝毫未动。</p>
+                      <p align=left>2.重载+、+=和StringBuilder</p>
+                      <p align=left>+与+=是java中仅有的两个重载过的操作符， +后面如果是非String类,会调用toString方法，Object的toString方法打印出来的是内存地址。StringBuilder非线程安全，StringBuffer线程安全。</p>
+                  </section>
+                  <section>
+                  <h3>字符串</h3>
+                      <p align=left>3.正则表达式</p>
+                      <pre><code data-trim contenteditable>
+                      public static void main(String[] args) { 
+  //将给定的正则表达式编译到模式中
+  Pattern p = Pattern.compile("a*b"); 
+  //创建匹配器
+  Matcher m = p.matcher("aaaaab"); 
+  //与模式进行匹配
+  boolean b = m.matches();  
+  System.out.println(b);  
+  //合一写法(但这样写模式不能重用,适合一次匹配)
+  b = Pattern.matches("a*b", "aaaaab"); 
+  System.out.println(b); 
+  //String中的matches
+  String str = "1111"; 
+  b= str.matches("\\d*"); 
+  System.out.println(b);  
+}  
+                    </code></pre>
+                  </section>
+                </section>
+                
 				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
+					<h3>谢谢!</h3>
+					<img src="tupian/tupian6.gif">
 				</section> 
 
 			</div>
